@@ -20,7 +20,8 @@ app.get('*', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Serving files from: ${__dirname}`);
+  console.log(`Environment PORT: ${process.env.PORT || 'not set, using default 3000'}`);
 });
