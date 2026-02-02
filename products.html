@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — Abba Group MB</title>
+  <meta name="description" content="Explore Abba Group MB products: Chrome Extension for physicians and AI adoption solutions for healthcare.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="media/ab.png" alt="Abba Group MB" class="logo-image">
+        </a>
+        <div class="logo-text">
+          <div class="logo-title">Abba Group MB</div>
+          <div class="logo-subtitle">Cognitive amplifiers for healthcare</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="company.html" class="nav-link">Company</a>
+        <a href="contact.html" class="nav-link btn btn-outline">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 4rem;">
+      <div class="container section-inner">
+        <div class="section-header">
+          <h1>Main directions</h1>
+          <p>Current products and research tracks of Abba Group MB.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-label">Product · MVP</div>
+            <h2>Chrome Extension for physicians</h2>
+            <p>
+              A browser extension that records the physician's voice during visits, 
+              converts it into structured medical data, and automatically 
+              fills fields in the medical system.
+            </p>
+            <ul class="card-list">
+              <li>Audio recording via MediaRecorder API</li>
+              <li>Whisper for transcription and GPT‑4o for structuring</li>
+              <li>Auto-filling forms via Content Script</li>
+              <li>Stripe subscription and credit limits</li>
+            </ul>
+            <div style="margin-top: 1rem;">
+              <a href="contact.html" class="btn btn-secondary">Request early access</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Business</div>
+            <h2>Abba Group MB as a platform</h2>
+            <p>
+              A Lithuanian small community (Mažoji bendrija) created as a legal and operational 
+              base for AI solutions in healthcare and a future AI adoption agency.
+            </p>
+            <ul class="card-list">
+              <li>Legal structure for IT products</li>
+              <li>Flexibility for pilots with clinics and private practices</li>
+              <li>Transparent distribution of shares and control</li>
+            </ul>
+            <div style="margin-top: 1rem;">
+              <a href="company.html" class="btn btn-secondary">View company details</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Research</div>
+            <h2>AI adoption in healthcare</h2>
+            <p>
+              We explore bottlenecks in physician workflows where AI can provide real value: from 
+              routine documentation to more complex decision support.
+            </p>
+            <ul class="card-list">
+              <li>Analysis of current clinical workflows</li>
+              <li>Prototyping "invisible" AI assistants</li>
+              <li>Content and positioning (LinkedIn, Substack)</li>
+            </ul>
+            <div style="margin-top: 1rem;">
+              <a href="contact.html" class="btn btn-secondary">Discuss collaboration</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container section-inner">
+        <div class="section-header">
+          <h2>Technical stack</h2>
+          <p>Technologies powering our Chrome Extension</p>
+        </div>
+        <div class="two-columns">
+          <div>
+            <h3>Frontend</h3>
+            <ul class="checklist">
+              <li>Chrome Extension (Manifest V3)</li>
+              <li>JavaScript (Vanilla/React)</li>
+              <li>Content Scripts for form interaction</li>
+              <li>MediaRecorder API for audio capture</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Backend & Services</h3>
+            <ul class="checklist">
+              <li>Node.js + Express server</li>
+              <li>MongoDB (Mongoose) for user data</li>
+              <li>OpenAI API (Whisper + GPT-4o)</li>
+              <li>Stripe for subscriptions</li>
+              <li>Firebase for Google authentication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Abba Group MB. All rights reserved.</span>
+      <span class="footer-note">Registered in Lithuania · Juridinių asmenų registras</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

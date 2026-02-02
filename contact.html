@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Abba Group MB</title>
+  <meta name="description" content="Get in touch with Abba Group MB to discuss AI solutions for healthcare or request early access to our products.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="media/ab.png" alt="Abba Group MB" class="logo-image">
+        </a>
+        <div class="logo-text">
+          <div class="logo-title">Abba Group MB</div>
+          <div class="logo-subtitle">Cognitive amplifiers for healthcare</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="company.html" class="nav-link">Company</a>
+        <a href="contact.html" class="nav-link btn btn-outline">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 4rem;">
+      <div class="container section-inner contact-layout">
+        <div>
+          <h1>Contact</h1>
+          <p>
+            If you represent a clinic, private practice, or healthcare company and want to 
+            test our solutions or discuss AI adoption, please reach out.
+          </p>
+          <ul class="contact-list">
+            <li><span class="label">Email</span> <a href="mailto:info@abbagroup.lt">info@abbagroup.lt</a></li>
+            <li><span class="label">Location</span> Kaunas, Lithuania</li>
+          </ul>
+          <div style="margin-top: 2rem;">
+            <h3>What we can help with</h3>
+            <ul class="checklist">
+              <li>Early access to Chrome Extension</li>
+              <li>AI adoption consulting for clinics</li>
+              <li>Pilot programs and partnerships</li>
+              <li>Custom AI solutions for healthcare</li>
+            </ul>
+          </div>
+        </div>
+        <form class="contact-form" action="mailto:info@abbagroup.lt" method="post" enctype="text/plain">
+          <h2>Send a message</h2>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" placeholder="name@clinic.com" required>
+          </div>
+          <div class="form-group">
+            <label for="role">Role</label>
+            <input id="role" name="role" type="text" placeholder="Physician, clinic manager, etc.">
+          </div>
+          <div class="form-group">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Short description of your context and needs" required></textarea>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">Send message</button>
+          <p class="form-note">By sending this form you agree to be contacted by Abba Group MB.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Abba Group MB. All rights reserved.</span>
+      <span class="footer-note">Registered in Lithuania · Juridinių asmenų registras</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
