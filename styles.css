@@ -17,6 +17,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.page-white {
+  background: #ffffff;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -309,6 +313,10 @@ img {
   background: radial-gradient(circle at top right, #eff6ff 0, #f9fafb 45%, #ffffff 100%);
 }
 
+body.page-white .section-alt {
+  background: #ffffff;
+}
+
 .section-inner {
   display: flex;
   flex-direction: column;
@@ -369,6 +377,39 @@ img {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.75rem;
+}
+
+.about-hero {
+  padding: 4.25rem 0 2.5rem;
+}
+
+.about-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  max-width: 860px;
+}
+
+.about-hero h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.about-hero-image {
+  width: 100%;
+  height: 420px;
+  border-radius: 1.4rem;
+  object-fit: cover;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.about-hero-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
 }
 
 .cards-grid.team-grid {
@@ -659,6 +700,15 @@ img {
 }
 
 @media (max-width: 640px) {
+  .about-hero {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .about-hero-image {
+    height: 340px;
+    border-radius: 1.2rem;
+  }
+
   .hero {
     padding-top: 3.5rem;
   }
