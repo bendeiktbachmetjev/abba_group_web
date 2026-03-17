@@ -19,6 +19,12 @@ body {
 
 body.page-white {
   background: #ffffff;
+  --about-ink: #0f172a;
+  --about-muted: #475569;
+  --about-muted-2: #64748b;
+  --about-border: rgba(226, 232, 240, 0.9);
+  --about-surface: rgba(255, 255, 255, 0.9);
+  --about-radius: 1.25rem;
 }
 
 a {
@@ -387,7 +393,7 @@ body.page-white .section-alt {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-  max-width: 860px;
+  max-width: 1120px;
 }
 
 .about-hero h1 {
@@ -400,16 +406,36 @@ body.page-white .section-alt {
 .about-hero-image {
   width: 100%;
   height: 420px;
-  border-radius: 1.4rem;
+  border-radius: var(--about-radius, 1.25rem);
   object-fit: cover;
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  border: 1px solid var(--about-border, rgba(226, 232, 240, 0.9));
+}
+
+.values-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.value-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid var(--about-border, rgba(226, 232, 240, 0.9));
+  color: var(--about-ink, #0f172a);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .about-hero-text {
   margin: 0;
   font-size: 1rem;
   line-height: 1.75;
-  color: #4b5563;
+  color: var(--about-muted, #4b5563);
+  max-width: 860px;
 }
 
 .cards-grid.team-grid {
@@ -420,8 +446,8 @@ body.page-white .section-alt {
 .card.team-card {
   padding: 0;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: var(--about-surface, rgba(255, 255, 255, 0.9));
+  border: 1px solid var(--about-border, rgba(226, 232, 240, 0.9));
   box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
   gap: 0;
 }
@@ -431,6 +457,13 @@ body.page-white .section-alt {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+}
+
+.team-card-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card {
@@ -462,7 +495,7 @@ body.page-white .section-alt {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #6b7280;
+  color: var(--about-muted-2, #6b7280);
 }
 
 .card h3 {
@@ -473,7 +506,52 @@ body.page-white .section-alt {
 .card p {
   margin: 0.25rem 0 0;
   font-size: 0.95rem;
-  color: #4b5563;
+  color: var(--about-muted, #4b5563);
+}
+
+.section-header p {
+  color: var(--about-muted, #6b7280);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeUpSoft {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .about-hero h1,
+  .about-hero-image,
+  .values-row,
+  .about-hero-text {
+    animation: fadeUpSoft 520ms ease both;
+  }
+
+  .about-hero-image {
+    animation-delay: 60ms;
+  }
+
+  .values-row {
+    animation-delay: 110ms;
+  }
+
+  .about-hero-text {
+    animation-delay: 160ms;
+  }
+
+  .team-grid .team-card {
+    animation: fadeUpSoft 520ms ease both;
+  }
+
+  .team-grid .team-card:nth-child(1) { animation-delay: 80ms; }
+  .team-grid .team-card:nth-child(2) { animation-delay: 140ms; }
+  .team-grid .team-card:nth-child(3) { animation-delay: 200ms; }
+  .team-grid .team-card:nth-child(4) { animation-delay: 260ms; }
 }
 
 .card-list {
@@ -706,7 +784,11 @@ body.page-white .section-alt {
 
   .about-hero-image {
     height: 340px;
-    border-radius: 1.2rem;
+    border-radius: var(--about-radius, 1.25rem);
+  }
+
+  .value-pill {
+    padding: 0.5rem 0.9rem;
   }
 
   .hero {
