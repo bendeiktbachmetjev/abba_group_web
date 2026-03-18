@@ -32,55 +32,70 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-inner">
+    <section class="hero" style="padding-top: 6rem; padding-bottom: 4rem;">
+      <div class="container" style="max-width: 860px; text-align: center; display: flex; flex-direction: column; align-items: center;">
         <div class="hero-content">
-          <h1>AI tools that remove routine from physicians</h1>
-          <p class="hero-text">
+          <h1 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1.5rem;">AI tools that remove routine from physicians</h1>
+          <p class="hero-text" style="font-size: 1.15rem; line-height: 1.8; color: #4b5563; max-width: 720px; margin: 0 auto;">
             Abba Group MB is a small community (Mažoji bendrija) registered in Kaunas, Lithuania. 
             We create "cognitive amplifiers" for physicians — tools that seamlessly eliminate 
             paperwork and allow focusing on the patient.
           </p>
-          <div class="hero-actions">
-            <a href="products.html" class="btn btn-primary">View main product</a>
-            <a href="company.html" class="btn btn-ghost">Company details</a>
+          <div class="hero-actions" style="justify-content: center; margin-top: 2rem; gap: 1rem;">
+            <a href="products.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">View main product</a>
+            <a href="company.html" class="btn btn-ghost" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Company details</a>
           </div>
-          <p class="hero-note">
+          <p class="hero-note" style="margin-top: 2rem; color: #6b7280;">
             Main focus: AI solutions for healthcare, Chrome Extension for physicians, and AI adoption in clinics.
           </p>
-        </div>
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <span class="badge">Chrome Extension · MVP</span>
-            <h2>Assistive AI for doctors</h2>
-          </div>
-          <ul class="hero-list">
-            <li>
-              <span class="dot"></span>
-              Voice recording during patient visits (MediaRecorder API)
-            </li>
-            <li>
-              <span class="dot"></span>
-              Transcription via OpenAI Whisper and data structuring (GPT‑4o)
-            </li>
-            <li>
-              <span class="dot"></span>
-              Automatic filling of medical forms on the active browser tab
-            </li>
-            <li>
-              <span class="dot"></span>
-              Subscription model: ~€10/month, 360 credits limit
-            </li>
-          </ul>
-          <div class="hero-card-footer">
-            <span class="label">Stack</span>
-            <p>Chrome Extension (MV3), Node.js, Express, MongoDB, Stripe, Firebase, OpenAI API.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section">
+      <div class="container section-inner">
+        <div class="section-header" style="text-align: center;">
+          <h2>Our Projects</h2>
+          <p>Architectural approach to efficiency, from medical monitoring to systems simulation.</p>
+        </div>
+        <div class="cards-grid team-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <article class="card team-card">
+            <img src="media/ABBA%20LARS.jpeg" alt="iLARS" class="team-avatar" style="height: 240px;">
+            <div class="team-card-body" style="padding: 1.5rem;">
+              <span class="card-label">Medical Monitoring</span>
+              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">iLARS</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; -webkit-line-clamp: unset; line-clamp: unset;">
+                Smart monitoring system for post-oncology surgery patients. Analyzes real-time status to detect worrying symptoms early and ensures direct clinic connection, enhancing clinical safety.
+              </p>
+            </div>
+          </article>
+          
+          <article class="card team-card">
+            <img src="media/Dr.%20Filler.jpeg" alt="Dr. Filler" class="team-avatar" style="height: 240px;">
+            <div class="team-card-body" style="padding: 1.5rem;">
+              <span class="card-label">Chrome Extension</span>
+              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">Dr. Filler</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; -webkit-line-clamp: unset; line-clamp: unset;">
+                An intelligent assistant for doctors that automatically fills visit data into electronic medical records by analyzing consultation context, cutting down administrative cognitive load.
+              </p>
+            </div>
+          </article>
+          
+          <article class="card team-card">
+            <img src="media/SimuFlow.jpg" alt="SimuFlow" class="team-avatar" style="height: 240px;">
+            <div class="team-card-body" style="padding: 1.5rem;">
+              <span class="card-label">Process Optimization</span>
+              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">SimuFlow</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; -webkit-line-clamp: unset; line-clamp: unset;">
+                System for modeling and simulating workflows. Uses applied statistics to predict bottlenecks and proposes the most effective pathways for resource allocation.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container section-inner">
         <div class="section-header">
           <h2>Explore our work</h2>
