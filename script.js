@@ -1,8 +1,8 @@
 // Initialize simple interactive behavior for Abba Group MB landing
 
 // Handle mobile navigation toggle
-const nav = document.querySelector('.nav');
-const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.floating-nav');
+const navToggle = document.querySelector('.floating-nav-wrapper .nav-toggle');
 
 if (nav && navToggle) {
   navToggle.addEventListener('click', () => {
@@ -12,8 +12,16 @@ if (nav && navToggle) {
   // Close nav when clicking a link (mobile)
   nav.addEventListener('click', (event) => {
     const target = event.target;
-    if (target instanceof HTMLElement && target.classList.contains('nav-link')) {
+    if (target instanceof HTMLElement && target.classList.contains('fnav-link')) {
       nav.classList.remove('open');
+    }
+  });
+
+  // Highlight active link
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.fnav-link').forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
     }
   });
 }
