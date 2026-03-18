@@ -44,12 +44,18 @@ main {
 
 body.page-white {
   background: #ffffff;
+  color: #0f172a;
   --about-ink: #0f172a;
   --about-muted: #475569;
   --about-muted-2: #64748b;
   --about-border: rgba(226, 232, 240, 0.9);
   --about-surface: rgba(255, 255, 255, 0.9);
   --about-radius: 1.25rem;
+}
+
+body.page-white .footer {
+  background: #ffffff;
+  border-top: 1px solid rgba(226, 232, 240, 0.7);
 }
 
 a {
@@ -323,7 +329,11 @@ img {
 
 /* Animated Hero (Products Page) */
 .hero-animated {
-  padding: 6.5rem 0 5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
   background: radial-gradient(circle at top left, #f8fafc 0, #ffffff 40%, #ffffff 100%);
 }
 
@@ -407,7 +417,7 @@ img {
 
 /* Products Page — Accordion Layout */
 .products-section {
-  padding: 5rem 0 3rem;
+  padding: 6rem 0 3rem;
 }
 
 .products-layout {
@@ -425,11 +435,11 @@ img {
 
 .products-text h1 {
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.04em;
   margin: 0 0 1.25rem;
-  color: #111827;
+  color: #0f172a;
 }
 
 .products-text p {
@@ -513,11 +523,11 @@ img {
 }
 
 .section-alt {
-  background: radial-gradient(circle at top right, #eff6ff 0, #f9fafb 45%, #ffffff 100%);
+  background: #f9fafb;
 }
 
 body.page-white .section-alt {
-  background: #ffffff;
+  background: #f9fafb;
 }
 
 .section-inner {
@@ -659,6 +669,7 @@ body.page-white .section-alt {
 .team-card-body p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -844,10 +855,15 @@ body.page-white .section-alt {
 .contact-form {
   border-radius: 1.25rem;
   padding: 1.5rem 1.4rem;
-  background: #0b1220;
-  color: #e5e7eb;
-  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.contact-form h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
 }
 
 .contact-form h3 {
@@ -863,29 +879,30 @@ body.page-white .section-alt {
 
 .form-group label {
   font-size: 0.8rem;
-  color: #cbd5f5;
+  color: #475569;
 }
 
 .form-group input,
 .form-group textarea {
   border-radius: 0.75rem;
-  border: 1px solid rgba(148, 163, 184, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   padding: 0.55rem 0.7rem;
   font-size: 0.9rem;
   font-family: inherit;
-  background: rgba(15, 23, 42, 0.85);
-  color: #f9fafb;
+  background: #f9fafb;
+  color: #0f172a;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #64748b;
+  color: #94a3b8;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: 2px solid #4f46e5;
+  outline: 2px solid #0f172a;
   outline-offset: 1px;
+  border-color: #0f172a;
 }
 
 .form-note {

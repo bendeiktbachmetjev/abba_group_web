@@ -52,7 +52,7 @@ if (yearElement) {
 // Animated hero text
 const animatedWord = document.getElementById('animated-word');
 if (animatedWord) {
-  const words = ["smart", "seamless", "innovative", "precise", "secure"];
+  const words = ["simplicity", "optimization", "minimalism", "precision", "clarity"];
   let currentIndex = 0;
   
   animatedWord.innerText = words[currentIndex];
