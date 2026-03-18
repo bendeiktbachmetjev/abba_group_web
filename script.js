@@ -41,3 +41,36 @@ if (yearElement) {
   yearElement.textContent = String(new Date().getFullYear());
 }
 
+// Animated hero text
+const animatedWord = document.getElementById('animated-word');
+if (animatedWord) {
+  const words = ["smart", "seamless", "innovative", "precise", "secure"];
+  let currentIndex = 0;
+  
+  animatedWord.innerText = words[currentIndex];
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % words.length;
+    
+    // Animate out
+    animatedWord.style.transform = "translateY(-120%)";
+    animatedWord.style.opacity = "0";
+    
+    setTimeout(() => {
+      // Switch word while invisible
+      animatedWord.innerText = words[currentIndex];
+      
+      // Move to bottom immediately (without transition)
+      animatedWord.style.transition = "none";
+      animatedWord.style.transform = "translateY(120%)";
+      
+      // Force reflow
+      void animatedWord.offsetWidth;
+      
+      // Animate in
+      animatedWord.style.transition = "transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease";
+      animatedWord.style.transform = "translateY(0)";
+      animatedWord.style.opacity = "1";
+    }, 500); // Wait for animate out to finish
+  }, 2500);
+}

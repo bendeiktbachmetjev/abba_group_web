@@ -34,63 +34,72 @@
   </header>
 
   <main>
-    <section class="section" style="padding-top: 4rem;">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h1>Main directions</h1>
-          <p>Current products and research tracks of Abba Group MB.</p>
+    <section class="hero-animated">
+      <div class="container hero-animated-inner">
+        <div>
+          <a href="about.html" class="btn btn-outline btn-pill" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            Read our launch article 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
+          </a>
         </div>
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-label">Product · MVP</div>
-            <h2>Chrome Extension for physicians</h2>
-            <p>
-              A browser extension that records the physician's voice during visits, 
-              converts it into structured medical data, and automatically 
-              fills fields in the medical system.
-            </p>
-            <ul class="card-list">
-              <li>Audio recording via MediaRecorder API</li>
-              <li>Whisper for transcription and GPT‑4o for structuring</li>
-              <li>Auto-filling forms via Content Script</li>
-              <li>Stripe subscription and credit limits</li>
-            </ul>
-            <div style="margin-top: 1rem;">
-              <a href="contact.html" class="btn btn-secondary">Request early access</a>
+        <h1>
+          <span class="static-text" style="color: #06b6d4; display: block; margin-bottom: 0.5rem;">This is something</span>
+          <span class="animated-text-wrapper">
+            <span class="animated-text" id="animated-word">smart</span>
+          </span>
+        </h1>
+        <p class="hero-subtitle">
+          Managing a medical practice today is already complex. Avoid further complications by ditching outdated, tedious paperwork. Our goal is to streamline healthcare workflows, making them easier and safer than ever.
+        </p>
+        <div class="hero-actions" style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+          <a href="contact.html" class="btn btn-outline" style="padding: 0.85rem 1.8rem; font-size: 1.05rem;">
+            Jump on a call 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+          <a href="#products-list" class="btn btn-primary" style="padding: 0.85rem 1.8rem; font-size: 1.05rem;">
+            Explore products 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="products-list" class="section">
+      <div class="container section-inner">
+        <div class="cards-grid team-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <article class="card team-card">
+            <img src="media/ABBA%20LARS.jpeg" alt="iLARS" class="team-avatar" style="height: 250px;">
+            <div class="team-card-body" style="padding: 1.5rem;">
+              <span class="card-label">Medical Monitoring</span>
+              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">iLARS</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+                Smart monitoring system for post-oncology surgery patients. Analyzes real-time status to detect worrying symptoms early and ensures direct clinic connection, enhancing clinical safety.
+              </p>
+              <a href="contact.html" class="btn btn-secondary btn-full">Learn more</a>
             </div>
           </article>
-
-          <article class="card">
-            <div class="card-label">Business</div>
-            <h2>Abba Group MB as a platform</h2>
-            <p>
-              A Lithuanian small community (Mažoji bendrija) created as a legal and operational 
-              base for AI solutions in healthcare and a future AI adoption agency.
-            </p>
-            <ul class="card-list">
-              <li>Legal structure for IT products</li>
-              <li>Flexibility for pilots with clinics and private practices</li>
-              <li>Transparent distribution of shares and control</li>
-            </ul>
-            <div style="margin-top: 1rem;">
-              <a href="company.html" class="btn btn-secondary">View company details</a>
+          
+          <article class="card team-card">
+            <img src="media/Dr.%20Filler.jpeg" alt="Dr. Filler" class="team-avatar" style="height: 250px;">
+            <div class="team-card-body" style="padding: 1.5rem;">
+              <span class="card-label">Chrome Extension</span>
+              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">Dr. Filler</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+                An intelligent assistant for doctors that automatically fills visit data into electronic medical records by analyzing consultation context, cutting down administrative cognitive load.
+              </p>
+              <a href="contact.html" class="btn btn-secondary btn-full">Learn more</a>
             </div>
           </article>
-
-          <article class="card">
-            <div class="card-label">Research</div>
-            <h2>AI adoption in healthcare</h2>
-            <p>
-              We explore bottlenecks in physician workflows where AI can provide real value: from 
-              routine documentation to more complex decision support.
-            </p>
-            <ul class="card-list">
-              <li>Analysis of current clinical workflows</li>
-              <li>Prototyping "invisible" AI assistants</li>
-              <li>Content and positioning (LinkedIn, Substack)</li>
-            </ul>
-            <div style="margin-top: 1rem;">
-              <a href="contact.html" class="btn btn-secondary">Discuss collaboration</a>
+          
+          <article class="card team-card">
+            <img src="media/SimuFlow.jpg" alt="SimuFlow" class="team-avatar" style="height: 250px;">
+            <div class="team-card-body" style="padding: 1.5rem;">
+              <span class="card-label">Process Optimization</span>
+              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">SimuFlow</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+                System for modeling and simulating workflows. Uses applied statistics to predict bottlenecks and proposes the most effective pathways for resource allocation.
+              </p>
+              <a href="contact.html" class="btn btn-secondary btn-full">Learn more</a>
             </div>
           </article>
         </div>
