@@ -21,8 +21,8 @@ body {
 }
 
 body.home-space {
-  background: url('media/space.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: #000 url('media/space.jpg') no-repeat center center fixed !important;
+  background-size: cover !important;
   color: #f8fafc;
 }
 
@@ -30,8 +30,12 @@ body.home-space::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.45); /* Dark overlay for readability */
+  background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
   z-index: -1;
+}
+
+body.home-space main {
+  background: transparent !important;
 }
 
 main {
@@ -75,6 +79,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.home-space .floating-nav-wrapper {
+  background: transparent;
 }
 
 .floating-nav {
@@ -319,6 +327,10 @@ img {
   background: radial-gradient(circle at top left, #f8fafc 0, #ffffff 40%, #ffffff 100%);
 }
 
+.home-space .hero-animated {
+  background: transparent;
+}
+
 .hero-animated-inner {
   display: flex;
   flex-direction: column;
@@ -368,12 +380,29 @@ img {
   color: #0f172a;
 }
 
-.home-space .hero-animated h1 .static-text {
+.home-space .animated-text {
   color: #ffffff;
+}
+
+.home-space .hero-animated h1 .static-text {
+  color: #06b6d4; /* Keep it cyan or make it white? Let's keep it cyan for pop */
 }
 
 .home-space .hero-subtitle {
   color: #cbd5e1;
+}
+
+.home-space .btn-pill {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.home-space .btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Products Page — Accordion Layout */
@@ -870,6 +899,11 @@ body.page-white .section-alt {
   padding: 1.5rem 0 2rem;
   border-top: 1px solid rgba(226, 232, 240, 0.9);
   background: #f9fafb;
+}
+
+.home-space .footer {
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-inner {
