@@ -74,3 +74,14 @@ if (animatedWord) {
     }, 500); // Wait for animate out to finish
   }, 2500);
 }
+
+// Image Accordion (Products page)
+const accordionItems = document.querySelectorAll('.accordion-item');
+if (accordionItems.length > 0) {
+  accordionItems.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      accordionItems.forEach((el) => el.classList.remove('active'));
+      item.classList.add('active');
+    });
+  });
+}

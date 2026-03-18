@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products — Abba Group MB</title>
-  <meta name="description" content="Explore Abba Group MB products: Chrome Extension for physicians and AI adoption solutions for healthcare.">
+  <meta name="description" content="Explore Abba Group MB products: iLARS medical monitoring, Dr. Filler Chrome Extension, and SimuFlow process optimization.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,104 +34,79 @@
   </header>
 
   <main>
-    <section class="hero-animated">
-      <div class="container hero-animated-inner">
-        <div>
-          <a href="about.html" class="btn btn-outline btn-pill" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-            Read our launch article 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
-          </a>
-        </div>
-        <h1>
-          <span class="static-text" style="color: #06b6d4; display: block; margin-bottom: 0.5rem;">This is something</span>
-          <span class="animated-text-wrapper">
-            <span class="animated-text" id="animated-word">smart</span>
-          </span>
-        </h1>
-        <p class="hero-subtitle">
-          Managing a medical practice today is already complex. Avoid further complications by ditching outdated, tedious paperwork. Our goal is to streamline healthcare workflows, making them easier and safer than ever.
-        </p>
-        <div class="hero-actions" style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
-          <a href="contact.html" class="btn btn-outline" style="padding: 0.85rem 1.8rem; font-size: 1.05rem;">
-            Jump on a call 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          </a>
-          <a href="#products-list" class="btn btn-primary" style="padding: 0.85rem 1.8rem; font-size: 1.05rem;">
-            Explore products 
+    <section class="products-section">
+      <div class="container products-layout">
+
+        <!-- Left Side: Text Content -->
+        <div class="products-text">
+          <h1>AI-Augmented Tools for Healthcare & Beyond</h1>
+          <p>
+            We build systems where AI handles the routine, leaving humans 
+            in control of critical decisions — from medical monitoring 
+            to workflow simulation.
+          </p>
+          <a href="contact.html" class="btn btn-secondary" style="padding: 0.85rem 1.8rem; font-size: 1rem; margin-top: 1rem;">
+            Contact Us
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
           </a>
         </div>
+
+        <!-- Right Side: Image Accordion -->
+        <div class="accordion-container" id="accordion">
+          <div class="accordion-item active" data-index="0">
+            <img src="media/ABBA%20LARS.jpeg" alt="iLARS" class="accordion-img">
+            <div class="accordion-overlay"></div>
+            <span class="accordion-caption">iLARS</span>
+          </div>
+          <div class="accordion-item" data-index="1">
+            <img src="media/Dr.%20Filler.jpeg" alt="Dr. Filler" class="accordion-img">
+            <div class="accordion-overlay"></div>
+            <span class="accordion-caption">Dr. Filler</span>
+          </div>
+          <div class="accordion-item" data-index="2">
+            <img src="media/SimuFlow.jpg" alt="SimuFlow" class="accordion-img">
+            <div class="accordion-overlay"></div>
+            <span class="accordion-caption">SimuFlow</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section id="products-list" class="section">
+    <!-- Detail cards below -->
+    <section class="section" style="padding-top: 5rem;">
       <div class="container section-inner">
-        <div class="cards-grid team-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-          <article class="card team-card">
-            <img src="media/ABBA%20LARS.jpeg" alt="iLARS" class="team-avatar" style="height: 250px;">
-            <div class="team-card-body" style="padding: 1.5rem;">
-              <span class="card-label">Medical Monitoring</span>
-              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">iLARS</h3>
-              <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-                Smart monitoring system for post-oncology surgery patients. Analyzes real-time status to detect worrying symptoms early and ensures direct clinic connection, enhancing clinical safety.
-              </p>
-              <a href="contact.html" class="btn btn-secondary btn-full">Learn more</a>
-            </div>
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <article class="card">
+            <div class="card-label">Medical Monitoring</div>
+            <h3>iLARS</h3>
+            <p>
+              Smart monitoring for post-oncology surgery patients. 
+              Real-time analysis detects worrying symptoms early and ensures 
+              direct clinic connection, enhancing clinical safety.
+            </p>
+            <a href="contact.html" class="btn btn-secondary">Learn more</a>
           </article>
-          
-          <article class="card team-card">
-            <img src="media/Dr.%20Filler.jpeg" alt="Dr. Filler" class="team-avatar" style="height: 250px;">
-            <div class="team-card-body" style="padding: 1.5rem;">
-              <span class="card-label">Chrome Extension</span>
-              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">Dr. Filler</h3>
-              <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-                An intelligent assistant for doctors that automatically fills visit data into electronic medical records by analyzing consultation context, cutting down administrative cognitive load.
-              </p>
-              <a href="contact.html" class="btn btn-secondary btn-full">Learn more</a>
-            </div>
+          <article class="card">
+            <div class="card-label">Chrome Extension</div>
+            <h3>Dr. Filler</h3>
+            <p>
+              An intelligent assistant that automatically fills visit data 
+              into electronic medical records by analyzing consultation context, 
+              cutting down administrative cognitive load.
+            </p>
+            <a href="contact.html" class="btn btn-secondary">Learn more</a>
           </article>
-          
-          <article class="card team-card">
-            <img src="media/SimuFlow.jpg" alt="SimuFlow" class="team-avatar" style="height: 250px;">
-            <div class="team-card-body" style="padding: 1.5rem;">
-              <span class="card-label">Process Optimization</span>
-              <h3 class="team-card-name" style="margin-bottom: 0.5rem;">SimuFlow</h3>
-              <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-                System for modeling and simulating workflows. Uses applied statistics to predict bottlenecks and proposes the most effective pathways for resource allocation.
-              </p>
-              <a href="contact.html" class="btn btn-secondary btn-full">Learn more</a>
-            </div>
+          <article class="card">
+            <div class="card-label">Process Optimization</div>
+            <h3>SimuFlow</h3>
+            <p>
+              Modeling and simulating workflows using applied statistics 
+              to predict bottlenecks and propose the most effective pathways 
+              for resource allocation.
+            </p>
+            <a href="contact.html" class="btn btn-secondary">Learn more</a>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h2>Technical stack</h2>
-          <p>Technologies powering our Chrome Extension</p>
-        </div>
-        <div class="two-columns">
-          <div>
-            <h3>Frontend</h3>
-            <ul class="checklist">
-              <li>Chrome Extension (Manifest V3)</li>
-              <li>JavaScript (Vanilla/React)</li>
-              <li>Content Scripts for form interaction</li>
-              <li>MediaRecorder API for audio capture</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Backend & Services</h3>
-            <ul class="checklist">
-              <li>Node.js + Express server</li>
-              <li>MongoDB (Mongoose) for user data</li>
-              <li>OpenAI API (Whisper + GPT-4o)</li>
-              <li>Stripe for subscriptions</li>
-              <li>Firebase for Google authentication</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
