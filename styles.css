@@ -477,11 +477,9 @@ p {
 
 .statement-inner {
   max-width: 880px;
-  margin: 0 auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
 }
 
@@ -679,6 +677,13 @@ p {
   color: transparent;
 }
 
+.founder-label.neutral {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--muted-2);
+  font-weight: 600;
+}
+
 .founder-name {
   margin: 0;
   font-size: 1.35rem;
@@ -698,38 +703,6 @@ p {
   color: var(--muted);
 }
 
-/* Team cards */
-
-.cards-grid.team-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  max-width: 760px;
-}
-
-.card.team-card {
-  padding: 0;
-  overflow: hidden;
-  gap: 0;
-}
-
-.team-avatar {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.team-card-body {
-  padding: 1.25rem 1.4rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.team-card-name {
-  margin: 0.15rem 0 0;
-  font-size: 1.15rem;
-}
-
 .card-label {
   font-size: 0.75rem;
   font-weight: 600;
@@ -747,6 +720,10 @@ p {
 
 .section-first {
   padding-top: 9rem;
+}
+
+.section-tight {
+  padding-top: 0;
 }
 
 .section-alt {
@@ -884,6 +861,23 @@ p {
   display: inline-flex;
   width: 100%;
   justify-content: center;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--blue);
+  transition: gap 0.25s var(--ease);
+}
+
+.link-arrow:hover {
+  gap: 0.6rem;
 }
 
 /* Products page — accordion layout
@@ -1290,23 +1284,17 @@ p {
   .values-row { animation-delay: 240ms; }
 
   .pillars-grid .pillar-card,
-  .team-grid .team-card,
   .founders-grid .founder-card {
     animation: fadeUpSoft 640ms var(--ease) both;
   }
 
   .pillars-grid .pillar-card:nth-child(1),
-  .founders-grid .founder-card:nth-child(1),
-  .team-grid .team-card:nth-child(1) { animation-delay: 60ms; }
+  .founders-grid .founder-card:nth-child(1) { animation-delay: 60ms; }
 
   .pillars-grid .pillar-card:nth-child(2),
-  .founders-grid .founder-card:nth-child(2),
-  .team-grid .team-card:nth-child(2) { animation-delay: 140ms; }
+  .founders-grid .founder-card:nth-child(2) { animation-delay: 140ms; }
 
-  .pillars-grid .pillar-card:nth-child(3),
-  .team-grid .team-card:nth-child(3) { animation-delay: 220ms; }
-
-  .team-grid .team-card:nth-child(4) { animation-delay: 300ms; }
+  .pillars-grid .pillar-card:nth-child(3) { animation-delay: 220ms; }
 }
 
 /* Responsive
@@ -1423,8 +1411,7 @@ p {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .cards-grid,
-  .cards-grid.team-grid {
+  .cards-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -1435,10 +1422,6 @@ p {
   .founder-photo {
     height: 320px;
     min-height: 0;
-  }
-
-  .team-avatar {
-    height: 320px;
   }
 
   .feature-media img {
