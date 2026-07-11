@@ -445,34 +445,27 @@ p {
   max-width: 640px;
 }
 
-.values-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.5rem;
-}
-
-.value-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid var(--hairline);
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  box-shadow: var(--shadow-sm);
-}
-
 /* About page — mission statement
    ========================================================================== */
 
 .statement {
-  padding: 6rem 0;
-  border-top: 1px solid var(--hairline);
+  position: relative;
+  padding: 10rem 0 6rem;
+  overflow: hidden;
+}
+
+.statement::before {
+  content: "";
+  position: absolute;
+  inset: -30% -10% auto;
+  height: 120%;
+  background: var(--grad-soft);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.statement .container {
+  position: relative;
 }
 
 .statement-inner {
@@ -1268,20 +1261,21 @@ p {
   .hero-animated h1,
   .hero-animated .hero-subtitle,
   .hero-animated .hero-actions,
-  .about-hero .eyebrow,
   .about-hero h1,
   .about-hero-text,
-  .values-row {
+  .statement .eyebrow,
+  .statement h2,
+  .statement p {
     animation: fadeUpSoft 640ms var(--ease) both;
   }
 
   .hero-animated .hero-subtitle,
-  .about-hero h1 { animation-delay: 80ms; }
+  .about-hero h1,
+  .statement h2 { animation-delay: 80ms; }
 
   .hero-animated .hero-actions,
-  .about-hero-text { animation-delay: 160ms; }
-
-  .values-row { animation-delay: 240ms; }
+  .about-hero-text,
+  .statement p { animation-delay: 160ms; }
 
   .pillars-grid .pillar-card,
   .founders-grid .founder-card {
@@ -1404,7 +1398,7 @@ p {
   }
 
   .statement {
-    padding: 4.5rem 0;
+    padding: 7.5rem 0 3.5rem;
   }
 
   .steps-grid {
