@@ -52,7 +52,10 @@ if (yearElement) {
 // Animated hero text
 const animatedWord = document.getElementById('animated-word');
 if (animatedWord) {
-  const words = ["simplicity", "science", "precision", "clarity", "momentum"];
+  // Each language lists its own words in data-words
+  const words = (animatedWord.dataset.words || "simplicity, science, precision, clarity, momentum")
+    .split(",")
+    .map((word) => word.trim());
   let currentIndex = 0;
   
   animatedWord.innerText = words[currentIndex];
