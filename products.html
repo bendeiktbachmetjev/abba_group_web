@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products — Abba Group MB</title>
-  <meta name="description" content="Explore Abba Group MB products: iLARS medical monitoring, Dr. Filler Chrome Extension, and SimuFlow process optimization.">
+  <meta name="description" content="Abba Group MB products: iLARS for patient follow-up after rectal cancer surgery, Dr. Filler for medical records, and SimuFlow for running medical simulation centres.">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-white">
@@ -23,84 +24,232 @@
   </header>
 
   <main>
-    <section class="products-section">
-      <div class="container products-layout">
+    <section class="lineup-hero">
+      <div class="container lineup-hero-inner">
+        <span class="eyebrow">Products</span>
+        <h1>Less routine. <span class="grad-text">More medicine.</span></h1>
+        <p class="lineup-hero-text">
+          Three products built by physicians — for following patients after cancer
+          surgery, for writing medical records, and for running medical simulation centres.
+        </p>
 
-        <!-- Left Side: Text Content -->
-        <div class="products-text">
-          <h1>Tools that remove <span class="grad-text">the routine.</span></h1>
-          <p>
-            We build systems where AI handles the repetitive work, leaving humans
-            in control of critical decisions — from medical monitoring
-            to workflow simulation.
-          </p>
-          <a href="contact.html" class="btn btn-secondary btn-lg">
-            Contact Us
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
+        <nav class="lineup-icons" aria-label="Our products">
+          <a href="#ilars" class="lineup-icon brand-ilars">
+            <span class="lineup-icon-art">
+              <img class="app-icon" src="media/products/ilars-icon.webp" alt="" width="104" height="104">
+            </span>
+            <span class="lineup-icon-name">iLARS</span>
+            <span class="lineup-icon-text">Patient follow&#8209;up</span>
           </a>
-        </div>
-
-        <!-- Right Side: Image Accordion -->
-        <div class="accordion-container" id="accordion">
-          <div class="accordion-item active" data-index="0">
-            <img src="media/ABBA%20LARS.jpeg" alt="iLARS" class="accordion-img">
-            <div class="accordion-overlay"></div>
-            <span class="accordion-caption">iLARS</span>
-          </div>
-          <div class="accordion-item" data-index="1">
-            <img src="media/Dr.%20Filler.jpeg" alt="Dr. Filler" class="accordion-img">
-            <div class="accordion-overlay"></div>
-            <span class="accordion-caption">Dr. Filler</span>
-          </div>
-          <div class="accordion-item" data-index="2">
-            <img src="media/SimuFlow.jpg" alt="SimuFlow" class="accordion-img">
-            <div class="accordion-overlay"></div>
-            <span class="accordion-caption">SimuFlow</span>
-          </div>
-        </div>
-
+          <a href="#dr-filler" class="lineup-icon brand-drfiller">
+            <span class="lineup-icon-art">
+              <img class="app-icon" src="media/products/drfiller-icon.svg" alt="" width="104" height="104">
+            </span>
+            <span class="lineup-icon-name">Dr. Filler</span>
+            <span class="lineup-icon-text">Medical records</span>
+          </a>
+          <a href="#simuflow" class="lineup-icon brand-simuflow">
+            <span class="lineup-icon-art">
+              <img class="app-icon" src="media/products/simuflow-icon.webp" alt="" width="104" height="104">
+            </span>
+            <span class="lineup-icon-name">SimuFlow</span>
+            <span class="lineup-icon-text">Simulation centres</span>
+          </a>
+        </nav>
       </div>
     </section>
 
-    <!-- Detail cards below -->
-    <section class="section">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h2>The lineup</h2>
-          <p>Three systems, one purpose — give clinicians and researchers their time back.</p>
+    <!-- iLARS -->
+    <section class="product brand-ilars" id="ilars">
+      <div class="container product-container">
+        <div class="product-stage">
+          <div class="product-copy" data-reveal>
+            <div class="product-id">
+              <img class="app-icon" src="media/products/ilars-icon.webp" alt="" width="56" height="56">
+              <div>
+                <h2 class="product-name">iLARS</h2>
+                <span class="product-kind">Patient follow-up</span>
+              </div>
+            </div>
+            <p class="product-headline">Every day <span class="accent">between visits.</span></p>
+            <p class="product-text">
+              After rectal cancer surgery, many patients live with bowel problems for months.
+              With iLARS they log their symptoms in two minutes each evening — and their
+              doctor sees the trend, and who needs attention, on one screen.
+            </p>
+            <ul class="product-points">
+              <li>A two-minute daily check-in on the phone</li>
+              <li>A doctor portal that flags worsening scores and missed check-ins</li>
+              <li>Now growing into Lithuania's national colorectal cancer registry</li>
+            </ul>
+            <div class="product-actions">
+              <a href="https://ilars.eu" class="btn btn-brand btn-lg" target="_blank" rel="noopener">
+                Visit ilars.eu
+                <svg class="icon-out" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+              <span class="store-links">
+                <a href="https://play.google.com/store/apps/details?id=com.abba.lars" class="store-link" target="_blank" rel="noopener">
+                  Google Play
+                  <svg class="icon-out" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div class="product-visual" data-reveal>
+            <div class="showcase">
+              <div class="showcase-browser">
+                <div class="browser">
+                  <div class="browser-bar" aria-hidden="true">
+                    <span class="browser-dots"><i></i><i></i><i></i></span>
+                    <span class="browser-url">ilars.eu/doctor</span>
+                  </div>
+                  <img src="media/products/ilars-portal.webp" alt="iLARS doctor portal: patients who need attention, adherence and LARS scores (demo data)" width="1800" height="1125" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <div class="showcase-phone">
+                <div class="phone">
+                  <div class="phone-screen" data-slides>
+                    <img class="is-active" src="media/products/ilars-phone-daily.webp" alt="iLARS patient app: the daily symptom check-in" width="660" height="1431" loading="lazy" decoding="async">
+                    <img src="media/products/ilars-phone-weekly.webp" alt="iLARS patient app: the weekly LARS score questionnaire" width="660" height="1431" loading="lazy" decoding="async">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-label">Medical Monitoring</div>
-            <h3>iLARS</h3>
-            <p>
-              Smart monitoring for patients after oncological surgery — now growing
-              into the national colorectal cancer registry. Real-time analysis detects
-              worrying symptoms early and keeps patients connected to their clinic.
+      </div>
+    </section>
+
+    <!-- Dr. Filler -->
+    <section class="product brand-drfiller" id="dr-filler">
+      <div class="container product-container">
+        <div class="product-stage reverse">
+          <div class="product-copy" data-reveal>
+            <div class="product-id">
+              <img class="app-icon" src="media/products/drfiller-icon.svg" alt="" width="56" height="56">
+              <div>
+                <h2 class="product-name">Dr. Filler</h2>
+                <span class="product-kind">Medical records</span>
+              </div>
+            </div>
+            <p class="product-headline">Look up <span class="accent">at your patient.</span></p>
+            <p class="product-text">
+              A Chrome extension for doctors in Lithuania. It listens to the consultation,
+              reads earlier documents and fills in the visit record. The doctor checks it
+              and saves.
             </p>
-            <a href="contact.html" class="link-arrow">Learn more <span aria-hidden="true">→</span></a>
-          </article>
-          <article class="card">
-            <div class="card-label">Chrome Extension</div>
-            <h3>Dr. Filler</h3>
-            <p>
-              An intelligent assistant that fills visit data into electronic medical
-              records by analyzing consultation context — cutting administrative
-              load to a minimum.
-            </p>
-            <a href="dr-filler.html" class="link-arrow">Learn more <span aria-hidden="true">→</span></a>
-          </article>
-          <article class="card">
-            <div class="card-label">Process Optimization</div>
-            <h3>SimuFlow</h3>
-            <p>
-              Modeling and simulating workflows with applied statistics to predict
-              bottlenecks and propose the most effective pathways — used by the
-              VU Medical Science Centre's simulation centre.
-            </p>
-            <a href="contact.html" class="link-arrow">Learn more <span aria-hidden="true">→</span></a>
-          </article>
+            <ul class="product-points">
+              <li>Fills in E025 and E027 forms and suggests ICD-10 codes</li>
+              <li>Works inside ELI, Foxus, VARUTIS and ESIS</li>
+              <li>A phone app records ward rounds and sends the text to the computer</li>
+            </ul>
+            <div class="product-actions">
+              <a href="https://drfiller.lt/en/" class="btn btn-brand btn-lg" target="_blank" rel="noopener">
+                Visit drfiller.lt
+                <svg class="icon-out" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-visual" data-reveal>
+            <div class="showcase">
+              <div class="showcase-browser">
+                <div class="browser browser-bare">
+                  <img src="media/products/drfiller-window.webp" alt="Dr. Filler panel in a clinic's records system, with an E025 form filled in from the conversation (demo data)" width="1800" height="1056" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <div class="showcase-phone">
+                <div class="phone">
+                  <div class="phone-screen" data-slides>
+                    <img class="is-active" src="media/products/drfiller-phone-recording.webp" alt="Dr. Filler phone app recording a consultation" width="660" height="1434" loading="lazy" decoding="async">
+                    <img src="media/products/drfiller-phone-home.webp" alt="Dr. Filler phone app with a list of recordings" width="660" height="1434" loading="lazy" decoding="async">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- SimuFlow -->
+    <section class="product brand-simuflow" id="simuflow">
+      <div class="container product-container">
+        <div class="product-stage">
+          <div class="product-copy" data-reveal>
+            <div class="product-id">
+              <img class="app-icon" src="media/products/simuflow-icon.webp" alt="" width="56" height="56">
+              <div>
+                <h2 class="product-name">SimuFlow</h2>
+                <span class="product-kind">Simulation centres</span>
+              </div>
+            </div>
+            <p class="product-headline">Less planning. <span class="accent">More teaching.</span></p>
+            <p class="product-text">
+              A phone app and web dashboard that run a medical simulation centre day to day:
+              who is in, who trained on which simulator, and which classes are planned where.
+            </p>
+            <ul class="product-points">
+              <li>Check in with a tap of the phone; simulator time is logged automatically</li>
+              <li>Class planning that blocks double bookings, with reminders an hour before</li>
+              <li>In daily use at Vilnius University's Medical Simulation Centre since September 2026</li>
+            </ul>
+            <div class="product-actions">
+              <a href="https://www.simuflow.net" class="btn btn-brand btn-lg" target="_blank" rel="noopener">
+                Visit simuflow.net
+                <svg class="icon-out" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+              <span class="store-links">
+                <a href="https://apps.apple.com/lt/app/simuflow/id6760581109" class="store-link" target="_blank" rel="noopener">
+                  App Store
+                  <svg class="icon-out" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.simuflow.app" class="store-link" target="_blank" rel="noopener">
+                  Google Play
+                  <svg class="icon-out" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div class="product-visual" data-reveal>
+            <div class="showcase">
+              <div class="showcase-browser">
+                <div class="browser">
+                  <div class="browser-bar" aria-hidden="true">
+                    <span class="browser-dots"><i></i><i></i><i></i></span>
+                    <span class="browser-url">simuflow.net/admin</span>
+                  </div>
+                  <img src="media/products/simuflow-dashboard.webp" alt="SimuFlow web dashboard with student visits and training hours (demo data)" width="1800" height="1125" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <div class="showcase-phone">
+                <div class="phone">
+                  <div class="phone-screen" data-slides>
+                    <img class="is-active" src="media/products/simuflow-phone-dashboard.webp" alt="SimuFlow app dashboard with the NFC check-in button" width="600" height="1298" loading="lazy" decoding="async">
+                    <img src="media/products/simuflow-phone-activity.webp" alt="SimuFlow app: planned simulations and training history" width="600" height="1298" loading="lazy" decoding="async">
+                    <img src="media/products/simuflow-phone-schedule.webp" alt="SimuFlow app: a teacher's class schedule" width="600" height="1298" loading="lazy" decoding="async">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lineup-cta">
+      <div class="container lineup-cta-inner" data-reveal>
+        <h2>Want to see one <span class="grad-text">in action?</span></h2>
+        <p>We'll give you a live demo, or set up a pilot at your clinic or centre.</p>
+        <a href="contact.html" class="btn btn-secondary btn-lg">
+          Contact us
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg>
+        </a>
       </div>
     </section>
   </main>

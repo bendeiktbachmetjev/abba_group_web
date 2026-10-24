@@ -83,13 +83,82 @@ if (animatedWord) {
   }, 2500);
 }
 
-// Image Accordion (Products page)
-const accordionItems = document.querySelectorAll('.accordion-item');
-if (accordionItems.length > 0) {
-  accordionItems.forEach((item) => {
-    item.addEventListener('mouseenter', () => {
-      accordionItems.forEach((el) => el.classList.remove('active'));
-      item.classList.add('active');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+// Reveal blocks once they scroll into view (Products page)
+const revealItems = document.querySelectorAll('[data-reveal]');
+if (revealItems.length > 0) {
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+  }
+}
+
+// Phone screens cycle while visible (Products page)
+document.querySelectorAll('[data-slides]').forEach((show) => {
+  const slides = show.querySelectorAll('img');
+  if (slides.length < 2) return;
+
+  let current = 0;
+  let timer = null;
+
+  const next = () => {
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+  };
+
+  const start = () => {
+    if (timer || reduceMotion.matches) return;
+    timer = setInterval(next, 3400);
+  };
+
+  const stop = () => {
+    clearInterval(timer);
+    timer = null;
+  };
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach((entry) => (entry.isIntersecting ? start() : stop()));
+    }, { threshold: 0.4 }).observe(show);
+  } else {
+    start();
+  }
+});
+
+// Gentle depth while scrolling: the phone drifts a little faster than the window
+const showcases = document.querySelectorAll('.showcase');
+if (showcases.length > 0 && !reduceMotion.matches) {
+  let ticking = false;
+
+  const updateShift = () => {
+    const viewport = window.innerHeight;
+    showcases.forEach((showcase) => {
+      const rect = showcase.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > viewport) return;
+      const shift = (rect.top + rect.height / 2 - viewport / 2) / viewport;
+      showcase.style.setProperty('--shift', shift.toFixed(3));
     });
-  });
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateShift);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateShift();
 }
